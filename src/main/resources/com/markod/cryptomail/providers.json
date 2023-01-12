@@ -1,0 +1,39 @@
+{
+  "providers": {
+    "providerInformation": [
+      {
+        "name": "google",
+        "smtp": "smtp.gmail.com",
+        "imap": "imap.gmail.com",
+        "protocols": "TLSv1.2",
+        "trust": "*",
+        "smtpPort": 587,
+        "imapPort": 993,
+        "auth": true,
+        "starttls": true
+      },
+      {
+        "name": "yahoo",
+        "smtp": "smtp.mail.yahoo.com",
+        "imap": "imap.mail.yahoo.com",
+        "protocols": "TLSv1.2",
+        "trust": "*",
+        "smtpPort": 587,
+        "imapPort": 993,
+        "auth": true,
+        "starttls": true
+      },
+      {
+        "name": "outlook",
+        "smtp": "smtp.office365.com",
+        "imap": "outlook.office365.com",
+        "protocols": "TLSv1.2",
+        "trust": "*",
+        "smtpPort": 587,
+        "imapPort": 993,
+        "auth": true,
+        "starttls": true
+      }
+    ]
+  }
+}
