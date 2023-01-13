@@ -32,12 +32,12 @@ public class Main extends Application {
             credentials = new Pair<>(args[0], args[1]);
             args = null;
         }
-        launch();
+        launch(args);
     }
 
     @Override
-    public void start(Stage stage) throws Exception {
-        ScenesController.setStage(stage);
+    public void start(Stage primaryStage) throws Exception {
+        ScenesController.setStage(primaryStage);
         ScenesController.setStageTitle("Login");
         ScenesController.setStageScene(new FXMLLoader(getClass().getResource(ScenesController.Scenes.LOGIN.getResourceLocation())));
     }
