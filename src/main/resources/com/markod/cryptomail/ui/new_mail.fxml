@@ -6,9 +6,22 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import org.controlsfx.control.ToggleSwitch?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.markod.cryptomail.ui.NewMailController"
-            prefHeight="400.0" prefWidth="600.0">
+            prefHeight="433.0" prefWidth="600.0">
 
+    <Label layoutX="14" layoutY="18" text="To:"/>
+    <TextField fx:id="to" layoutX="87" layoutY="14" prefHeight="25" prefWidth="500"/>
+    <Label layoutX="14" layoutY="51" text="Subject:"/>
+    <TextField fx:id="subject" layoutX="87" layoutY="47" prefHeight="25" prefWidth="500"/>
+    <Label layoutX="14" layoutY="91" text="Encryption: "/>
+    <ToggleSwitch fx:id="encryptionSwitch" layoutX="87" layoutY="85" prefHeight="25" prefWidth="33"/>
+    <ChoiceBox fx:id="encryption" layoutX="493" layoutY="82" prefHeight="25" prefWidth="94" disable="true"/>
+    <PasswordField fx:id="password" layoutX="125" layoutY="82" prefHeight="25" prefWidth="362" disable="true" promptText="Type a password..."/>
+    <TextArea fx:id="content" layoutX="14" layoutY="116" prefHeight="268" prefWidth="574"/>
+    <Button layoutX="543" layoutY="394" mnemonicParsing="false" onAction="#onSendButtonClick" text="Send"/>
+    <Button layoutX="482" layoutY="394" mnemonicParsing="false" onAction="#onCancelButtonClick" text="Cancel"/>
+    <Button layoutX="14" layoutY="394" mnemonicParsing="false" onAction="#onAttachmentButtonClick" text="Attachments..."/>
 </AnchorPane>

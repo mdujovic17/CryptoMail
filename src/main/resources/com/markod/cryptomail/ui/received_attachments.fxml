@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="443.0" prefWidth="299.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.markod.cryptomail.ui.ReceivedAttachmentsController">
+   <children>
+      <ListView fx:id="attachmentsView" layoutX="12.0" layoutY="14.0" prefHeight="349.0" prefWidth="275.0" />
+      <Button layoutX="12.0" layoutY="371.0" mnemonicParsing="false" onAction="#onSaveSelectedButtonClick" prefHeight="25.0" prefWidth="275.0" text="Save selected"/>
+      <Button layoutX="12.0" layoutY="406.0" mnemonicParsing="false" onAction="#onCloseButtonClick" prefHeight="25.0" prefWidth="275.0" text="Close" />
+   </children>
+</AnchorPane>

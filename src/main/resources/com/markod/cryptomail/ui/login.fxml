@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.markod.cryptomail.ui.LoginController"
-            prefHeight="400.0" prefWidth="600.0">
-
+            prefHeight="166.0" prefWidth="255.0">
+    <Label layoutX="15" layoutY="14" text="Email"/>
+    <TextField fx:id="username" layoutX="15" layoutY="31" prefHeight="25" prefWidth="226" promptText="email@provider.com"/>
+    <Label layoutX="15" layoutY="62" text="Password"/>
+    <PasswordField fx:id="password" layoutX="15" layoutY="79" prefHeight="25" prefWidth="226" promptText="Type in the password..."/>
+    <Button fx:id="loginButton" layoutX="15" layoutY="127" mnemonicParsing="false" prefHeight="25" prefWidth="226" text="Log In" onAction="#onLoginButtonClick"/>
 </AnchorPane>

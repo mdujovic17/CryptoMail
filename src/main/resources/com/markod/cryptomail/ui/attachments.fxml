@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
-
-<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Button?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.markod.cryptomail.ui.AttachmentsController"
-            prefHeight="400.0" prefWidth="600.0">
-    <ListView fx:id="list" layoutX="14.0" layoutY="18.0" prefHeight="368" prefWidth="374"/>
-    <Button layoutX="403" layoutY="18" mnemonicParsing="false" prefHeight="25" prefWidth="183" text="Add attachments..." onAction="#onAddAttachmentsButtonClick"/>
-    <Button layoutX="403" layoutY="50" mnemonicParsing="false" prefHeight="25" prefWidth="183" text="Remove selected" onAction="#onRemoveSelectedButtonClick"/>
-    <Button layoutX="403" layoutY="82" mnemonicParsing="false" prefHeight="25" prefWidth="183" text="Clear all" onAction="#onClearAllButtonClick"/>
-    <Button layoutX="403" layoutY="361" mnemonicParsing="false" prefHeight="25" prefWidth="183" text="Close" onAction="#onCloseButtonClick"/>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.markod.cryptomail.ui.AttachmentsController">
+    <ListView fx:id="list" layoutX="14.0" layoutY="18.0" prefHeight="368" prefWidth="374" />
+    <Button layoutX="403" layoutY="18" mnemonicParsing="false" onAction="#onAddAttachmentsButtonClick" prefHeight="25" prefWidth="183" text="Add attachments..." />
+    <Button layoutX="403" layoutY="50" mnemonicParsing="false" onAction="#onRemoveSelectedButtonClick" prefHeight="25" prefWidth="183" text="Remove selected" />
+    <Button layoutX="403" layoutY="82" mnemonicParsing="false" onAction="#onClearAllButtonClick" prefHeight="25" prefWidth="183" text="Clear all" />
+    <Button layoutX="403" layoutY="361" mnemonicParsing="false" onAction="#onCloseButtonClick" prefHeight="25" prefWidth="183" text="Close" />
 </AnchorPane>
