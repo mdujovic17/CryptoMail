@@ -8,13 +8,13 @@ import java.io.IOException;
 
 public class ScenesController {
     public enum Scenes {
-        LOGIN("login.fxml"),
-        NEW_MAIL("new_mail.fxml"),
-        ATTACHMENTS("attachments.fxml"),
-        RECEIVED_ATTACHMENTS("received_attachments.fxml"),
-        INBOX("inbox.fxml"),
-        OPEN_MAIL("open_mail.fxml"),
-        DECRYPT("decrypt.fxml");
+        LOGIN("ui/login.fxml"),
+        NEW_MAIL("ui/new_mail.fxml"),
+        ATTACHMENTS("ui/attachments.fxml"),
+        RECEIVED_ATTACHMENTS("ui/received_attachments.fxml"),
+        INBOX("ui/inbox.fxml"),
+        OPEN_MAIL("ui/open_mail.fxml"),
+        DECRYPT("ui/decryption.fxml");
         private final String resourceLocation;
 
         Scenes(String resourceLocation) {
