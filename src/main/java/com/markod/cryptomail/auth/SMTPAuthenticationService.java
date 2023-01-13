@@ -21,7 +21,6 @@ public final class SMTPAuthenticationService extends AuthenticationService {
         Provider provider = Main.PROVIDERS.stream().filter(p -> p.getName().equals(providerName)).toList().get(0);
 
         properties.put("mail.smtp.auth", provider.isAuth());
-        properties.put("mail.smtp.ssl.enable", true);
         properties.put("mail.smtp.ssl.protocols", provider.getProtocols());
         properties.put("mail.smtp.ssl.trust", provider.getTrust());
         properties.put("mail.smtp.starttls.enable", provider.isStarttls());
