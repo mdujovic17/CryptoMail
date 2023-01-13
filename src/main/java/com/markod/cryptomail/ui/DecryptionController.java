@@ -1,7 +1,10 @@
 package com.markod.cryptomail.ui;
 
+import com.markod.cryptomail.mail.MailingService;
+import com.markod.cryptomail.mail.models.FileModel;
 import com.markod.cryptomail.util.Encryption;
 import com.markod.cryptomail.util.Triple;
+import jakarta.mail.MessagingException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceBox;
@@ -9,6 +12,7 @@ import javafx.scene.control.PasswordField;
 import javafx.stage.Stage;
 import org.jasypt.exceptions.EncryptionOperationNotPossibleException;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class DecryptionController {
@@ -25,9 +29,15 @@ public class DecryptionController {
         int selected = encryption.getSelectionModel().getSelectedIndex();
 
         try {
-
+            OpenMailController.INSTANCE.webView.getEngine().loadContent(Encryption.decryptText(MailingService.getInstance().getMessageContent(OpenMailController.message), Encryption.getHashFromPassword(password.getText(), algorithmList.get(selected).digest()), algorithmList.get(selected).algorithm()));
+            OpenMailController.attachmentModels.replaceAll(fileModel -> new FileModel(fileModel.fileName(), Encryption.decryptBytes(fileModel.bytes(), Encryption.getHashFromPassword(password.getText(), algorithmList.get(selected).digest()), algorithmList.get(selected).algorithm())));
         } catch (EncryptionOperationNotPossibleException e) {
             Alert a = new Alert(Alert.AlertType.ERROR, "Unable to Decrypt email\n" + e.getMessage());
+            a.show();
+        } catch (MessagingException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
 
         decryptionStage.close();
